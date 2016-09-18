@@ -60,7 +60,7 @@ function resize(source, target, image) {
         console.log(err);
         console.log("Quitting because of an error");
       } else {
-        console.log("Wrote " + name);
+        //console.log("Wrote " + name);
       }
     });
 };
@@ -95,7 +95,7 @@ function crop(source, target, image) {
         console.log(err);
         console.log("Quitting because of an error");
       } else {
-        console.log("Wrote " + name);
+        //console.log("Wrote " + name);
       }
     });
 }
@@ -117,3 +117,17 @@ icons.forEach(function(icon) {
 splashes.forEach(function(splash) {
   crop('resources/splash.png', 'resources/splashes/', splash);
 });
+
+
+console.log( 'App.icons({' );
+icons.forEach(function(icon,index) {
+  console.log( "\t'" + icon.name + "': 'resources/icons/" + icon.name + ".png'" + (index<icons.length-1?',':'') + " // " + icon.size );
+});
+console.log( '});' );
+
+
+console.log( 'App.launchScreens({' );
+splashes.forEach(function(splash,index) {
+  console.log( "\t'" + splash.name + "': 'resources/splashes/" + splash.name + ".png'" + (index<splashes.length-1?',':'') + " // " + splash.size );
+});
+console.log( '});' );
