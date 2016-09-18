@@ -7,7 +7,7 @@
 
 ```
 git clone https://github.com/cestca/meteor-assets9
-cd meteor-assets
+cd meteor-assets9
 npm install
 ```
 
@@ -21,13 +21,17 @@ This project requires `imagemagick`.
 sudo apt-get install imagemagick imagemagick-doc
 ```
 
-#### Os X
+#### macOS
 
 Install [homebrew](http://brew.sh/) and then:
 
 ```
 brew install imagemagick
 ```
+
+#### Windows
+
+http://www.imagemagick.org/script/binary-releases.php#windows
 
 ### Note
 

@@ -1,8 +1,8 @@
 'use strict'
 
-let	fs = require('fs')
-let	gm = require('gm').subClass({imageMagick: true})
-let	patch9 = require( './patch9' )
+let fs = require('fs')
+let gm = require('gm').subClass({imageMagick: true})
+let patch9 = require( './patch9' )
 let loop = require( './loop' )
 
 let folder = 'assets'
