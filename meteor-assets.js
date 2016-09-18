@@ -1,6 +1,8 @@
 var fs = require('fs'),
     gm = require('gm').subClass({imageMagick: true});
 
+var folder = 'assets'
+
 var icons = [
   {name:"iphone_2x", size: "120x120"},
   {name: "iphone_3x", size: "180x180"},
@@ -102,32 +104,32 @@ function crop(source, target, image) {
 
 // Run the code
 
-if(!fs.existsSync(__dirname + '/resources/icons')) {
-  fs.mkdirSync(__dirname + '/resources/icons');
+if(!fs.existsSync(__dirname + '/' + folder + '/icons')) {
+  fs.mkdirSync(__dirname + '/' + folder + '/icons');
 }
 
-if(!fs.existsSync(__dirname + '/resources/splashes')) {
-  fs.mkdirSync(__dirname + '/resources/splashes');
+if(!fs.existsSync(__dirname + '/' + folder + '/splashes')) {
+  fs.mkdirSync(__dirname + '/' + folder + '/splashes');
 }
 
 icons.forEach(function(icon) {
-  resize('resources/icon.png', 'resources/icons/', icon);
+  resize( folder + '/icon.png', folder + '/icons/', icon);
 });
 
 splashes.forEach(function(splash) {
-  crop('resources/splash.png', 'resources/splashes/', splash);
+  crop( folder + '/splash.png', folder + '/splashes/', splash);
 });
 
 
 console.log( 'App.icons({' );
 icons.forEach(function(icon,index) {
-  console.log( "\t'" + icon.name + "': 'resources/icons/" + icon.name + ".png'" + (index<icons.length-1?',':'') + " // " + icon.size );
+  console.log( "\t'" + icon.name + "': '" + folder + "/icons/" + icon.name + ".png'" + (index<icons.length-1?',':'') + " // " + icon.size );
 });
 console.log( '});' );
 
 
 console.log( 'App.launchScreens({' );
 splashes.forEach(function(splash,index) {
-  console.log( "\t'" + splash.name + "': 'resources/splashes/" + splash.name + ".png'" + (index<splashes.length-1?',':'') + " // " + splash.size );
+  console.log( "\t'" + splash.name + "': '" + folder + "/splashes/" + splash.name + ".png'" + (index<splashes.length-1?',':'') + " // " + splash.size );
 });
 console.log( '});' );
