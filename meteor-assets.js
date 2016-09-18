@@ -1,5 +1,6 @@
 var fs = require('fs'),
-    gm = require('gm').subClass({imageMagick: true});
+    gm = require('gm').subClass({imageMagick: true}),
+    patch9 = require('./patch9');
 
 var folder = 'assets'
 
@@ -96,6 +97,17 @@ function crop(source, target, image) {
         console.log(err);
         console.log("Quitting because of an error");
       } else {
+
+        if( name.indexOf( 'android' ) >= 0 ){
+
+          patch9( target + name + '.png' , function(){
+            
+            fs.unlink( target + name + '.png' );
+
+          } );
+
+        }
+
         //console.log("Wrote " + name);
       }
     });
@@ -129,6 +141,6 @@ console.log( '});' );
 
 console.log( 'App.launchScreens({' );
 splashes.forEach(function(splash,index) {
-  console.log( "\t'" + splash.name + "': '" + folder + "/splashes/" + splash.name + ".png'" + (index<splashes.length-1?',':'') + " // " + splash.size );
+  console.log( "\t'" + splash.name + "': '" + folder + "/splashes/" + splash.name + (splash.name.indexOf('android')>=0?'.9':'') + ".png'" + (index<splashes.length-1?',':'') + " // " + splash.size );
 });
 console.log( '});' );
