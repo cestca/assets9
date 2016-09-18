@@ -1,20 +1,20 @@
-
+'use strict'
 
 module.exports = function( filename , done ){
 
-    var patchLength = 2
+    let patchLength = 2
 
-    var fs = require( 'fs' )
-    var PNG = require( 'pngjs' ).PNG
+    let fs = require( 'fs' )
+    let PNG = require( 'pngjs' ).PNG
 
     fs.createReadStream( filename )
         .pipe( new PNG({ filterType: 4 }) )
         .on( 'parsed' , function(){
 
-            for (var y = 0; y < this.height; y++) {
-                for (var x = 0; x < this.width; x++) {
+            for (let y = 0; y < this.height; y++) {
+                for (let x = 0; x < this.width; x++) {
 
-                    var idx = (this.width * y + x) << 2;
+                    let idx = (this.width * y + x) << 2;
 
                     if( ( x >= 1 && x <= patchLength && y == 0 ) 
                         || ( x > this.width - 2 - patchLength && x <= this.width - 2 && y == 0 )
