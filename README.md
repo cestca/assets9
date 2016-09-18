@@ -1,4 +1,4 @@
-# meteor image asset generator
+# meteor image asset generator (including 9 patch png for android splash screens)
 
 ## Setup
 
@@ -6,7 +6,7 @@
 - Open the repository in the command line and run `npm install`
 
 ```
-git clone https://github.com/cestca/meteor-assets
+git clone https://github.com/cestca/meteor-assets9
 cd meteor-assets
 npm install
 ```
@@ -57,7 +57,7 @@ Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/
 ## Notes
 
 - This will crop splashes horizontally centered and vertically centered.
-- This does not currently generate [9 patch](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch) images for Android.
+- This generates [9 patch](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch) images for Android.
 
 ## Contributing
 
