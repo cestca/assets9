@@ -61,4 +61,5 @@ Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/
 
 ## Contributing
 
-It wouldn't be so bad to turn this into a proper CLI node package.
+- Thanks to [Ipender](https://github.com/lpender/meteor-assets)
+- It wouldn't be so bad to turn this into a proper CLI node package.
