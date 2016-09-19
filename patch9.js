@@ -21,6 +21,7 @@ module.exports = function( filename , done ){
                         || ( x == 0 && y >= 1 && y <= patchLength )
                         || ( x == 0 && y > this.height - 2 - patchLength && y <= this.height - 2 ) ){
 
+                            // draw 1px black lines around the corners
                             this.data[idx] = 0
                             this.data[idx+1] = 0
                             this.data[idx+2] = 0
@@ -30,7 +31,8 @@ module.exports = function( filename , done ){
                                     || x == this.width - 1
                                     || y == 0
                                     || y == this.height - 1 ) {
-                                        
+                            
+                            // draw transparent 1px frame
                             this.data[idx] = 0
                             this.data[idx+1] = 0
                             this.data[idx+2] = 0

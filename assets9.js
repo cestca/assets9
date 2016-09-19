@@ -65,7 +65,7 @@ function resize( source , target , image , done ){
 	sharp( source ).resize( size.width , size.height ).gamma(3).toFile( filename , function(error){
 
 		if( error ){
-			console.log( 'ERROR reading (resize)' , error )
+			console.log( 'ERROR writing (resize)' , error )
 
 		} else {
 			
@@ -87,8 +87,8 @@ function crop( source , target , image , done ){
 	let span = ( size.height > size.width ? size.height : size.width );
 
 	// calculate x and y offset
-	var xOffset = (span/2) - (size.width/2);
-	var yOffset = (span/2) - (size.height/2);
+	// let xOffset = (span/2) - (size.width/2);
+	// let yOffset = (span/2) - (size.height/2);
 
 	//gm( source ).resize( span , span ).crop( size.width , size.height , xOffset , yOffset ).write( filename , function(error){
 	sharp( source ).resize( span , span ).embed().resize( size.width , size.height ).crop().toFile( filename , function(error){
@@ -98,8 +98,11 @@ function crop( source , target , image , done ){
 
 		} else {
 
+			// create 9 patch png for android
 			if( name.indexOf( 'android' ) >= 0 ){
 				patch9( filename , function(){
+
+					// delete non 9 patch png
 					fs.unlink( filename );
 					done()
 
@@ -117,7 +120,7 @@ function crop( source , target , image , done ){
 }
 
 
-function showConfig(){
+function showMeteorConfig(){
 
 	console.log( 'App.icons({' );
 	icons.forEach(function(icon,index) {
@@ -136,9 +139,6 @@ function showConfig(){
 
 
 
-
-// Run the code
-
 if(!fs.existsSync(__dirname + '/' + folder + '/icons')) {
 	fs.mkdirSync(__dirname + '/' + folder + '/icons');
 }
@@ -148,19 +148,21 @@ if(!fs.existsSync(__dirname + '/' + folder + '/splashes')) {
 }
 
 
+// loop around icons
 loop( icons , function(icon,index,list,done){
 
 	resize( folder + '/icon.png', folder + '/icons/', icon , done )
 
 } , function(){
 
+	// loop around splash screens
 	loop( splashes , function(splash,index,list,done){
 
 		crop( folder + '/splash.png', folder + '/splashes/', splash , done )
 
 	} , function(){
 
-		showConfig()
+		showMeteorConfig()
 
 	})
 
