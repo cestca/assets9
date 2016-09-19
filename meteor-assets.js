@@ -1,7 +1,8 @@
 'use strict'
 
 let fs = require('fs')
-let gm = require('gm').subClass({imageMagick: true})
+//let gm = require('gm').subClass({imageMagick: true})
+let sharp = require( 'sharp' )
 let patch9 = require( './patch9' )
 let loop = require( './loop' )
 
@@ -60,7 +61,8 @@ function resize( source , target , image , done ){
 	let name = image.name
 	let filename = target + name + '.png'
 
-	gm( source ).resize( size.width , size.height ).write( filename , function(error){
+	//gm( source ).resize( size.width , size.height ).write( filename , function(error){
+	sharp( source ).resize( size.width , size.height ).gamma(3).toFile( filename , function(error){
 
 		if( error ){
 			console.log( 'ERROR reading (resize)' , error )
@@ -88,7 +90,8 @@ function crop( source , target , image , done ){
 	var xOffset = (span/2) - (size.width/2);
 	var yOffset = (span/2) - (size.height/2);
 
-	gm( source ).resize( span , span ).crop( size.width , size.height , xOffset , yOffset ).write( filename , function(error){
+	//gm( source ).resize( span , span ).crop( size.width , size.height , xOffset , yOffset ).write( filename , function(error){
+	sharp( source ).resize( span , span ).embed().resize( size.width , size.height ).crop().toFile( filename , function(error){
 
 		if( error ){
 			console.log( 'ERROR writing (crop)' , error )

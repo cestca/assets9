@@ -11,44 +11,12 @@ cd meteor-assets9
 npm install
 ```
 
-## Environmental Dependencies
-
-This project requires `imagemagick`.
-
-### Linux
-
-```
-sudo apt-get install imagemagick imagemagick-doc
-```
-
-### macOS
-
-Install [homebrew](http://brew.sh/) and then:
-
-```
-brew install imagemagick
-```
-
-### Windows
-
-http://www.imagemagick.org/script/binary-releases.php#windows
-
-## Note
-
-This repository has been updated for usage with Meteor v1.3 and v1.4
-
-If `meteor --version` is less than `1.3`:
-
-```
-git pull --tags
-git checkout v0.0.2
-``` 
-
 ## Usage
 
 1. Generate an icon at 1024x1024 and place it in `assets/icon.png`.
 
 2. Generate a splash screen at 2208x2208 and place it in `assets/splash.png`.
+Place your logo / brand in a 1200x1200 square centered in that splash screen.
 
 3. Run `node meteor-assets`.
 
@@ -60,10 +28,12 @@ Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/
 
 ## Notes
 
+- For Meteor >= 1.3
 - This will crop splashes horizontally centered and vertically centered.
 - This generates [9 patch](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch) images for Android.
+- Uses [Sharp](https://github.com/lovell/sharp) library for image manipulation
 
 ## Contributing
 
-- Thanks to [Ipender](https://github.com/lpender/meteor-assets)
+- Thanks to [Ipender](https://github.com/lpender/meteor-assets) for the inspiration
 - It wouldn't be so bad to turn this into a proper CLI node package.

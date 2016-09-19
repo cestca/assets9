@@ -1,15 +1,15 @@
 {
-  "name": "meteor-asset-generator",
-  "version": "0.0.3",
+  "name": "meteor-assets9",
+  "version": "1.0.0",
   "description": "Generate icon and splash assets for mobile meteor apps.",
   "main": "meteor-assets.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Lee Pender",
+  "author": "Gautier",
   "license": "ISC",
   "dependencies": {
-    "gm": "^1.21.1",
-    "pngjs": "^3.0.0"
+    "pngjs": "^3.0.0",
+    "sharp": "^0.16.0"
   }
 }
