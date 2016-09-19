@@ -1,38 +1,30 @@
-# Cordova / Meteor image assets generator (including 9 patch png for Android splash screens)
+# Cordova / Meteor icons and splash screens generator (including 9 patch png for Android splash screens)
 
-## Setup
-
-- Clone this repository.
-- Open the repository in the command line and run `npm install`
+## Install
 
 ```
-git clone https://github.com/cestca/assets9
-cd assets9
-npm install
+npm install -g assets9
 ```
 
 ## Usage
 
-1. Generate an icon at 1024x1024 and place it in `assets/icon.png`.
+1. Create an icon at 1024x1024 and name it `icon.png`.
 
-2. Generate a splash screen at 2208x2208 and place it in `assets/splash.png`. Place your logo / brand in a 1200x1200 square centered in that splash screen.
+2. Create a splash screen at 2208x2208 and name it `splash.png`. Place your logo / brand in a 1200x1200 square centered in that splash screen.
 
-3. Run `node assets9`.
+3. Run `assets9` where these two files are.
 
-4. (Meteor) Copy the `assets` directory to your app: `cp -R assets /path/to/my/app`.
-
-5. (Meteor) Add the console output to your `mobile-config.js`
+4. (Meteor) Add the console output to your `mobile-config.js`
 
 Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/builder.js
 
 ## Notes
 
-- For Meteor >= 1.3 or Cordova
-- This will crop splashes horizontally centered and vertically centered.
-- This generates [9 patch](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch) images for Android.
-- Uses [Sharp](https://github.com/lovell/sharp) library for image manipulation
+- For Meteor >= 1.3 and Cordova
+- This will crop splash screen horizontally centered and vertically centered.
+- This generates [9 patch](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch) splash screens for Android.
 
-## Contributing
+## Credits
 
 - Thanks to [Ipender](https://github.com/lpender/meteor-assets) for the inspiration
-- It wouldn't be so bad to turn this into a proper CLI node package.
+- Thanks to [Sharp](https://github.com/lovell/sharp) for the image manipulation library with external dependancies included

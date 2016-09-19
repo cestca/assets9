@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict'
 
 let fs = require('fs')
@@ -6,7 +7,7 @@ let sharp = require( 'sharp' )
 let patch9 = require( './patch9' )
 let loop = require( './loop' )
 
-let folder = 'assets'
+let folder = '.'
 
 let icons = [
 	{name:"iphone_2x", size: "120x120"},
@@ -139,12 +140,12 @@ function showMeteorConfig(){
 
 
 
-if(!fs.existsSync(__dirname + '/' + folder + '/icons')) {
-	fs.mkdirSync(__dirname + '/' + folder + '/icons');
+if(!fs.existsSync( folder + '/icons')) {
+	fs.mkdirSync( folder + '/icons');
 }
 
-if(!fs.existsSync(__dirname + '/' + folder + '/splashes')) {
-	fs.mkdirSync(__dirname + '/' + folder + '/splashes');
+if(!fs.existsSync( folder + '/splashes')) {
+	fs.mkdirSync( folder + '/splashes');
 }
 
 

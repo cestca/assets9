@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Generate icons and splash screens for cordova / meteor apps.",
   "main": "assets9.js",
+  "bin": "assets9.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gautier",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "pngjs": "^3.0.0",
     "sharp": "^0.16.0"
