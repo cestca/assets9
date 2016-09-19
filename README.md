@@ -15,13 +15,13 @@ npm install
 
 This project requires `imagemagick`.
 
-#### Linux
+### Linux
 
 ```
 sudo apt-get install imagemagick imagemagick-doc
 ```
 
-#### macOS
+### macOS
 
 Install [homebrew](http://brew.sh/) and then:
 
@@ -29,13 +29,13 @@ Install [homebrew](http://brew.sh/) and then:
 brew install imagemagick
 ```
 
-#### Windows
+### Windows
 
 http://www.imagemagick.org/script/binary-releases.php#windows
 
-### Note
+## Note
 
-This repository has been updated for usage with Meteor v1.3.
+This repository has been updated for usage with Meteor v1.3 and v1.4
 
 If `meteor --version` is less than `1.3`:
 
