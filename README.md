@@ -15,14 +15,13 @@ npm install
 
 1. Generate an icon at 1024x1024 and place it in `assets/icon.png`.
 
-2. Generate a splash screen at 2208x2208 and place it in `assets/splash.png`.
-Place your logo / brand in a 1200x1200 square centered in that splash screen.
+2. Generate a splash screen at 2208x2208 and place it in `assets/splash.png`. Place your logo / brand in a 1200x1200 square centered in that splash screen.
 
 3. Run `node assets9`.
 
-4. Copy the `assets` directory to your app: `cp -R assets /path/to/my/app`.
+4. (Meteor) Copy the `assets` directory to your app: `cp -R assets /path/to/my/app`.
 
-5. Add the console output to your `mobile-config.js`
+5. (Meteor) Add the console output to your `mobile-config.js`
 
 Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/builder.js
 

@@ -1,8 +1,8 @@
 {
-  "name": "meteor-assets9",
+  "name": "assets9",
   "version": "1.0.0",
-  "description": "Generate icon and splash assets for mobile meteor apps.",
-  "main": "meteor-assets.js",
+  "description": "Generate icons and splash screens for cordova / meteor apps.",
+  "main": "assets9.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
