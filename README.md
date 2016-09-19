@@ -1,5 +1,7 @@
 # Cordova / Meteor icons and splash screens generator (including 9 patch png for Android splash screens)
 
+[same library with ImageMagick native dependancy](https://github.com/cestca/assets9-im)
+
 ## Install
 
 ```
@@ -27,7 +29,7 @@ Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/
 ## Credits
 
 - Thanks to [Ipender](https://github.com/lpender/meteor-assets) for the inspiration
-- Thanks to [Sharp](https://github.com/lovell/sharp) for the image manipulation library with native dependancies included
+- Thanks to [Sharp](https://github.com/lovell/sharp) for the image manipulation library with native dependancies (libvips) included
 
 ## License
 

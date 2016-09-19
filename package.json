@@ -1,6 +1,6 @@
 {
   "name": "assets9",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate icons and splash screens for cordova / meteor apps.",
   "main": "assets9.js",
   "bin": "assets9.js",
