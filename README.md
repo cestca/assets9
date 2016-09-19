@@ -1,4 +1,4 @@
-# meteor image asset generator (including 9 patch png for android splash screens)
+# Cordova / Meteor image assets generator (including 9 patch png for Android splash screens)
 
 ## Setup
 
@@ -6,8 +6,8 @@
 - Open the repository in the command line and run `npm install`
 
 ```
-git clone https://github.com/cestca/meteor-assets9
-cd meteor-assets9
+git clone https://github.com/cestca/assets9
+cd assets9
 npm install
 ```
 
@@ -18,7 +18,7 @@ npm install
 2. Generate a splash screen at 2208x2208 and place it in `assets/splash.png`.
 Place your logo / brand in a 1200x1200 square centered in that splash screen.
 
-3. Run `node meteor-assets`.
+3. Run `node assets9`.
 
 4. Copy the `assets` directory to your app: `cp -R assets /path/to/my/app`.
 
@@ -28,7 +28,7 @@ Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/
 
 ## Notes
 
-- For Meteor >= 1.3
+- For Meteor >= 1.3 or Cordova
 - This will crop splashes horizontally centered and vertically centered.
 - This generates [9 patch](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch) images for Android.
 - Uses [Sharp](https://github.com/lovell/sharp) library for image manipulation
