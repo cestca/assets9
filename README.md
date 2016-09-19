@@ -27,7 +27,7 @@ Sizes thanks to https://github.com/meteor/meteor/blob/release-1.4/tools/cordova/
 ## Credits
 
 - Thanks to [Ipender](https://github.com/lpender/meteor-assets) for the inspiration
-- Thanks to [Sharp](https://github.com/lovell/sharp) for the image manipulation library with external dependancies included
+- Thanks to [Sharp](https://github.com/lovell/sharp) for the image manipulation library with native dependancies included
 
 ## License
 
