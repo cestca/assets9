@@ -11,6 +11,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "icons", "splash screens", "splashscreen" ,
+    "9patch" , "9 patch" , "png",
+    "cordova", "meteor" , "app" , "asset" , "assets", "mobile-config.js",
+    "assets9" , "assets9-im" , "android" , "ios"
+  ],  
   "author": "Gautier",
   "license": "MIT",
   "dependencies": {
